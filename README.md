@@ -26,10 +26,25 @@ A simple and efficient Todo web application built using **Django** that helps us
 ---
 
 ## 📸 Screenshots
-🏠 Home Page
 
-➕ Add Task Page
+### 🏠 Home Page
+![Home Page](screenshots/home.png)
 
-✏️ Edit Task Page
+### ➕ Add Task
+![Add Task](screenshots/add_task.png)
 
-📋 Task List
+### ✏️ Edit Task
+![Edit Task](screenshots/edit_task.png)
+
+### 📋 View Tasks
+![View Tasks](screenshots/view_tasks.png)
+
+---
+
+## 👤 Profile Section
+
+### 👁️ View Profile
+![View Profile](screenshots/view_profile.png)
+
+### ✏️ Edit Profile
+![Edit Profile](screenshots/edit_profile.png)
