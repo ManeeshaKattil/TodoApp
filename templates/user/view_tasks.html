@@ -20,13 +20,13 @@
 {#  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>#}
 {#</div>#}
 {#                {% endfor %}#}
-    <form method="post" action="/view_tasks_post#aaa">
+    <form method="post" action="/view_tasks_post/#aaa">
     {% csrf_token %}
     <table class="table table-bordered table-hover table-light table-striped" border="1">
         <tr>
             <th>Search</th>
             <th colspan="5">
-                <input type="search" value="{{ Title }}" name="search" class="form-control bg-light border-0 shadow-sm">
+                <input type="search" value="{{ name }}" name="search" placeholder="Search tasks..." class="form-control bg-light border-0 shadow-sm">
             </th>
             <th>
 {#                <button type="submit" class="btn btn-secondary me-2">Search</button>#}
