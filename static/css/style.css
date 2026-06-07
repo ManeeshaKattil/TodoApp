@@ -1,0 +1,60 @@
+body {
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 420px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .app-title {
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .form-control {
+            border-radius: 12px;
+            padding: 12px;
+        }
+
+        .btn-login {
+            border-radius: 12px;
+            padding: 10px;
+            font-weight: 600;
+            background: #0d6efd;
+            transition: 0.3s;
+        }
+
+        .btn-login:hover {
+            background: #084298;
+            transform: scale(1.02);
+        }
+
+        .text-light a {
+            color: #fff;
+            font-weight: 600;
+            text-decoration: underline;
+        }

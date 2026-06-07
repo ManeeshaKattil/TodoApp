@@ -1,0 +1,60 @@
+{% extends 'user/home.html' %}
+{% block body %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="-sha384MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <title>View Tasks</title>
+</head>
+<body>
+    <div class="card-header bg-dark">
+        <h4 class="mb-0 text-white">Task List</h4>
+
+    </div>
+
+{#     {% for message in  messages %}#}
+{#<div class="alert alert-success alert-dismissible fade show" role="alert">#}
+{#  {{ message }}#}
+{#  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>#}
+{#</div>#}
+{#                {% endfor %}#}
+    <form method="post" action="/view_tasks_post#aaa">
+    {% csrf_token %}
+    <table class="table table-bordered table-hover table-light table-striped" border="1">
+        <tr>
+            <th>Search</th>
+            <th colspan="5">
+                <input type="search" value="{{ Title }}" name="search" class="form-control bg-light border-0 shadow-sm">
+            </th>
+            <th>
+{#                <button type="submit" class="btn btn-secondary me-2">Search</button>#}
+                <a href="/add_task_get#aaa" class="btn btn-info">Add New Task</a></th>
+        </tr>
+        <tr>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Priority</th>
+            <th>Created</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+        {% for i in tasks %}
+        <tr>
+            <td>{{ i.Title }}</td>
+            <td>{{ i.Description }}</td>
+            <td>{{ i.Priority }}</td>
+            <td>{{ i.Created_date }}</td>
+            <td>{{ i.Due_date }}</td>
+            <td>{{ i.Status }}</td>
+            <td><a href="/edit_task_get/{{ i.id }}#aaa" class="btn btn-info me-3" class="text-decoration-none">Edit</a>
+                <a href="/delete_task/{{ i.id }}" class="btn btn-danger" class="text-decoration-none">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    </form>
+</body>
+</html>
+{% endblock %}
